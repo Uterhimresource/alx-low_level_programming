@@ -10,29 +10,32 @@ void print_times_table(int n)
 	int n2;
 	int res;
 
-	for (n1 = 0; n1 <= n; n1++)
+	if (!(n > 15 || n < 0))
 	{
-		for (n2 = 0; n2 <= n; n2++)
+		for (n1 = 0; n1 <= n; n1++)
 		{
-			res = n1 * n2;
-			if (n2 != 0)
+			for (n2 = 0; n2 <= n; n2++)
 			{
-				_putchar(',');
-				_putchar(' ');
+				res = n1 * n2;
+				if (n2 != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				if (res >= 10)
+				{
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
+				}
+				else if (res < 10 && n2 != 0)
+				{
+					_putchar(' ');
+					_putchar((res % 10) + '0');
+				}
+				else
+					_putchar((res % 10) + '0');
 			}
-			if (res >= 10)
-			{
-				_putchar((res / 10) + '0');
-				_putchar((res % 10) + '0');
-			}
-			else if (res < 10 && n2 != 0)
-			{
-				_putchar(' ');
-				_putchar((res % 10) + '0');
-			}
-			else
-				_putchar((res % 10) + '0');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
