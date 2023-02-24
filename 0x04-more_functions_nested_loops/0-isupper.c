@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _islower - function
+ * _isupper - function
  * @c: parameter
  * Return: 0 when success
  */
-int _islower(int c)
+int _isupper(int c)
 {
 	if (c > 96 && c < 128)
 	{
