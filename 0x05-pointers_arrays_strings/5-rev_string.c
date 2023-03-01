@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * rev_string - reverse function
- * @s: variable that represent character data
- * Return: nothing
+ * rev_string - This fuction print a string reverser
+ *
+ *@s: this is the pointer that point to a string
  */
+
 void rev_string(char *s)
 {
 	int a, len;
@@ -20,7 +21,6 @@ void rev_string(char *s)
 	for (a = 0; a < len / 2; a++)
 	{
 		char x;
-
 		x = *end;
 		*end = *begin;
 		*begin = x;
