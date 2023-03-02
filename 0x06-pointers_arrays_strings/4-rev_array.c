@@ -1,24 +1,26 @@
 #include "main.h"
 /**
- * reverse_arra - pointer function
- * @a: pointer variable for string
- * @n: length of array
+ * _strncpy - strncat func
+ * @dest: variable for destination
+ * @src: variable for source
+ * @n: control variable
+ * Description: function used to cat source to dest
  * Return: success
  */
-void reverse_array(int *a, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int v1, v2, v3;
+	int c = 0;
 
-	if (n % 2 != 0)
-		v3 = n + 1;
-	else
-		v3 = n;
-
-	for (v1 = 0; v1 < v3 / 2; v1++)
+	while (c < n && src[c] != '\0')
 	{
-		v2 = a[v1];
-		a[v1] = a[n - 1 - v1];
-		a[n - 1 - v1] = v2;
+		dest[c] = src[c];
+		c++;
 	}
-}
+	if (c < n)
+	{
+		for (; c < n; c++)
 
+		dest[c] = '\0';
+	}
+	return (dest);
+}
