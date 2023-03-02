@@ -3,7 +3,7 @@
  * _strcat - pointer function
  * @dest: pointer variable for string
  * @src: pointer variable
- * Return: concatenated string
+ * Return: concatenate string
  */
 char *_strcat(char *dest, char *src)
 {
