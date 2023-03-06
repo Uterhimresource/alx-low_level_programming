@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * __strpbr - function that count length of character
+ * _strpbr - function that count length of character
  * @s: actual string
  * @accept: string to be searched
  * Return: length of string
